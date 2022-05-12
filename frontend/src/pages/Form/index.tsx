@@ -1,4 +1,5 @@
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Form() {
   const movie = {
@@ -25,7 +26,7 @@ function Form() {
             <input type="email" className="form-control" id="email" />
           </div>
           <div className="form-group dsmovie-form-group">
-            <label htmlFor="score">Stars:</label>
+            <label htmlFor="score">Rate:</label>
             <select className="form-control" id="score">
               <option>1</option>
               <option>2</option>
@@ -40,7 +41,9 @@ function Form() {
             </button>
           </div>
         </form>
-        <button className="btn btn-primary dsmovie-btn mt-3">Cancel</button>
+        <Link to="/">
+          <button className="btn btn-primary dsmovie-btn mt-3">Cancel</button>
+        </Link>
       </div>
     </div>
   );
